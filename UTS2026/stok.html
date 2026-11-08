@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Katalog & Stok Buku</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav><a href="dashboard.html">&larr; Kembali ke Dashboard</a></nav>
+        <h2 style="margin-top: 10px;">Informasi Stok & Katalog Buku</h2>
+
+        <h3>Tambah Stok Buku Baru</h3>
+        <form id="formTambahStok">
+            <div style="display: flex; gap: 10px;">
+                <input type="text" id="kodeBarang" placeholder="Kode Barang (misal: MATH101)" required>
+                <input type="text" id="namaBarang" placeholder="Nama Buku" required>
+                <input type="number" id="stok" placeholder="Stok" required>
+                <input type="text" id="harga" placeholder="Harga (misal: Rp 100.000)" required>
+            </div>
+            <button type="submit" style="margin-top: 10px;">Tambah Baris Stok</button>
+        </form>
+
+        <h3 style="margin-top: 25px;">Daftar Katalog Buku</h3>
+        <table id="tabelKatalog">
+            <thead>
+                <tr>
+                    <th>Cover</th>
+                    <th>Kode</th>
+                    <th>Nama Barang</th>
+                    <th>Jenis</th>
+                    <th>Edisi</th>
+                    <th>Stok</th>
+                    <th>Harga</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Diisi secara dinamis oleh JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+    <script>
+        renderKatalog();
+    </script>
+</body>
+</html>

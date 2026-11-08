@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Toko Buku - Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" style="max-width: 400px;">
+        <h2>Login Pemesanan Buku</h2>
+        <form id="formLogin">
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" id="email" required placeholder="rina@gmail.com">
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" id="password" required placeholder="rina123">
+            </div>
+            <button type="submit">Login</button>
+        </form>
+        <div style="margin-top: 15px;">
+            <a href="#" onclick="openModal('modalLupa')">Lupa Password?</a> | 
+            <a href="#" onclick="openModal('modalDaftar')">Daftar Baru</a>
+        </div>
+    </div>
+
+    <!-- Modal Lupa Password -->
+    <div id="modalLupa" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modalLupa')">&times;</span>
+            <h3>Lupa Password</h3>
+            <p>Masukkan email Anda untuk bantuan pemulihan password.</p>
+            <div class="form-group" style="margin-top:10px;">
+                <input type="email" placeholder="Email Anda">
+            </div>
+            <button onclick="alert('Instruksi pemulihan telah dikirim ke email!'); closeModal('modalLupa');">Kirim</button>
+        </div>
+    </div>
+
+    <!-- Modal Daftar -->
+    <div id="modalDaftar" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modalDaftar')">&times;</span>
+            <h3>Pendaftaran Akun Baru</h3>
+            <div class="form-group">
+                <label>Nama Lengkap</label>
+                <input type="text" placeholder="Nama Lengkap">
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" placeholder="Email Baru">
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" placeholder="Password">
+            </div>
+            <button onclick="alert('Pendaftaran berhasil! Silakan login.'); closeModal('modalDaftar');">Daftar</button>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

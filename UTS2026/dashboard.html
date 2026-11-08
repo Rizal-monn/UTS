@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="greetingText">Selamat Datang!</h1>
+        <p>Silakan pilih menu di bawah ini untuk mengelola aplikasi:</p>
+        <hr style="margin: 15px 0;">
+        <nav style="font-size: 18px;">
+            <ul>
+                <li style="margin: 10px 0;"><a href="stok.html">1. Informasi Stok / Katalog Buku</a></li>
+                <li style="margin: 10px 0;"><a href="tracking.html">2. Tracking Pengiriman</a></li>
+                <li style="margin: 10px 0;"><a href="checkout.html">3. Halaman Pemesanan / Checkout</a></li>
+                <li style="margin: 10px 0;"><a href="index.html" style="color: red;">4. Logout</a></li>
+            </ul>
+        </nav>
+    </div>
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Panggil fungsi greeting saat halaman dimuat
+        tampilkanGreeting();
+    </script>
+</body>
+</html>
